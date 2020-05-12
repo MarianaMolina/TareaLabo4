@@ -21,7 +21,7 @@ public class Product {
 	private Double precio;
 	
 	@NotEmpty(message="Este campo no puedeestar vacio")
-	private String vencimineto;
+	private String vencimiento;
 	
 	
 	public String getNombre() {
@@ -42,12 +42,13 @@ public class Product {
 	public void setPrecio(Double precio) {
 		this.precio = precio;
 	}
-	public String getVencimineto() {
-		return vencimineto;
+	public String getVencimiento() {
+		return vencimiento;
 	}
-	public void setVencimineto(String vencimineto) {
-		this.vencimineto = vencimineto;
+	public void setVencimiento(String vencimiento) {
+		this.vencimiento = vencimiento;
 	}
+	
 	
 	
 	

@@ -7,30 +7,46 @@
 <body>
 	<h1>ingresar producto</h1>
 	
-	<form th:action="@{formProducto}" th:object="${producto}" method="post">
-		<label>Nombre de producto:</label>
-		<input type="text" th:field="${producto.nombre}">
-		<span th:errors="*{nombre}" style ="color:#E81505"></span>
-		
-		<label style ="color:#E81505">Descripcion del producto:</label>
-		<input type="text" th:field="*{descripcion}" />
-		<span th:errors="*{descripcion}" style ="color:#E81505"></span>
-		
-		<label>Descripcion del producto:</label>
-		<input type="text" th:field="*{descripcion}" />
-		<span th:errors="*{descripcion}" style ="color:#E81505"></span>
-		
-		<label>Precio del producto:</label>
-		<input type="text" th:field="*{precio}" />
-		<span th:errors="*{precio}" style ="color:#E81505"></span>
-		
-		<label>Vencimiento del producto:</label>
-		<input type="text" th:field="*{vencimiento}" />
-		<span th:errors="*{vencimiento}" style ="color:#E81505"></span>
-		
-		
-		<input type="submit" value="Agregar Producto">
-	</form>
+	<section>
+		<form action="#" th:action="@{/formProducto}" th:object="${producto}" method="post">
+			<div>
+				<label for="nombre"> Nombre: </label>
+				<input type="text" th:field="*{nombre}" id="nombre" >
+				<span th:errors ="*{nombre}" style="color:#FF0000"></span>
+			</div>
+			
+			<br>
+			
+			<div>
+				<label for="descrip"> Descripcion: </label>
+				<input type="text" th:field="*{descripcion}" id="descrip" >
+				<span th:errors ="*{descripcion}" style="color:#FF0000"></span>
+			</div>
+			
+			<br>
+			
+			<div>
+				<label for="precio"> Precio: </label>
+				<input type="text" th:field="*{precio}" id="precio" >
+				<span th:errors ="*{precio}" style="color:#FF0000"></span>
+			</div>
+			
+			<br>
+			
+			<div>
+				<label for="fecha"> fecha de vencimiento: </label>
+				<input type="text" th:field="*{vencimiento}" id="fecha" >
+				<span th:errors ="*{vencimiento}" style="color:#FF0000"></span>
+			</div>
+			
+			<br>
+			
+			<input type="submit" value="Agregar Producto">
+		</form>
+	
+	</section>
+	
+	
 	
 </body>
 </html>
