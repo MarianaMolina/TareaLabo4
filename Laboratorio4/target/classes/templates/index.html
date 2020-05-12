@@ -4,44 +4,44 @@
 <meta charset="ISO-8859-1">
 <title>Ventana de producto</title>
 </head>
-<body>
-	<h1>ingresar producto</h1>
+<body bgcolor="#313684">
+	<h1><font color="white" face ="Arial" >INGRESAR PRODUCTO </font>  </h1>
 	
 	<section>
 		<form action="#" th:action="@{/formProducto}" th:object="${producto}" method="post">
 			<div>
-				<label for="nombre"> Nombre: </label>
-				<input type="text" th:field="*{nombre}" id="nombre" >
+				<label for="nombre"><font color="white" face ="Arial" >Nombre: </font>  </label>
+				<input type="text" th:field="*{nombre}" id="nombre" required >
 				<span th:errors ="*{nombre}" style="color:#FF0000"></span>
 			</div>
 			
 			<br>
 			
 			<div>
-				<label for="descrip"> Descripcion: </label>
-				<input type="text" th:field="*{descripcion}" id="descrip" >
+				<label for="descrip"> <font color="white" face ="Arial">Descripcion: </font>  </label>
+				<input type="text" th:field="*{descripcion}" id="descrip" required >
 				<span th:errors ="*{descripcion}" style="color:#FF0000"></span>
 			</div>
 			
 			<br>
 			
 			<div>
-				<label for="precio"> Precio: </label>
-				<input type="text" th:field="*{precio}" id="precio" >
+				<label for="precio"> <font color="white" face ="Arial"> Precio: </font>  </label>
+				<input type="number" th:field="*{precio}" id="precio" required>
 				<span th:errors ="*{precio}" style="color:#FF0000"></span>
 			</div>
 			
 			<br>
 			
 			<div>
-				<label for="fecha"> fecha de vencimiento: </label>
-				<input type="text" th:field="*{vencimiento}" id="fecha" >
+				<label for="fecha"> <font color="white" face ="Arial"> Fecha de vencimiento: </font> </label>
+				<input type="text" th:field="*{vencimiento}" id="fecha" required >
 				<span th:errors ="*{vencimiento}" style="color:#FF0000"></span>
 			</div>
 			
 			<br>
 			
-			<input type="submit" value="Agregar Producto">
+			<input type="submit" value="Agregar Producto">   
 		</form>
 	
 	</section>

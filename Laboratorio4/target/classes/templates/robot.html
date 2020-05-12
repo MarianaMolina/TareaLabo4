@@ -4,17 +4,18 @@
 <meta charset="ISO-8859-1">
 <title>SEGURIDAD</title>
 </head>
-<body>
+<body bgcolor="#313684">
 	<form th:action="@{/seguridad}" th:object="${robot}" method="post">
-		<label>Marcar solo si usted es un robot</label>
+		<label><font color="white" face ="Arial" >Marcar solo si usted es un robot</font></label>
 		<input type = "radio" th:field="*{soyRobot}" th:value ="${false}" >
-		<span th:errors="*{soyRobot}" style ="color:#E81505"></span>
-		
-		
+		<span th:errors ="*{soyRobot}" style="color:#FF0000"></span>
+	
 		<input type = "submit" value ="Aceptar">
 		
 	</form>
-	<a href="/producto">Regresar</a>
+	
+	<font color="white" face ="Arial" ><a href="/producto">Regresar</a></font>
+	
 	
 </body>
 </html>
